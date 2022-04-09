@@ -38,50 +38,50 @@ function useQuery() {
 const products = [
   {
     name: 'Ayam Pop',
-    image: '/static/images/ayam_pop.jpg',
+    image: '/public/images/ayam_pop.jpg',
     price: 'Rp10.000',
     stock: 7,
   },
   {
     name: 'Ayam Gulai',
-    image: '/static/images/gulai-ayamjpg.jpg',
+    image: '/public/images/gulai-ayamjpg.jpg',
     price: 'Rp10.000',
     stock: 5,
   },
   {
     name: 'Rendang',
-    image: '/static/images/rendang.jpg',
+    image: '/public/images/rendang.jpg',
     price: 'Rp15.000',
     stock: 4,
   },
   {
     name: 'Paru',
-    image: '/static/images/paru.jpg',
+    image: '/public/images/paru.jpg',
     price: 'Rp5.000',
     stock: 10,
   },
 
   {
     name: 'Dendeng Balado',
-    image: '/static/images/dendeng.jpg',
+    image: '/public/images/dendeng.jpg',
     price: 'Rp7.000',
     stock: 15,
   },
   {
     name: 'Gulai Otak',
-    image: '/static/images/gulai_otak.jpg',
+    image: '/public/images/gulai_otak.jpg',
     price: 'Rp7.000',
     stock: 5,
   },
   {
     name: 'Gulai Kepala Kakap',
-    image: '/static/images/gulai-kepala-kakap.jpg',
+    image: '/public/images/gulai-kepala-kakap.jpg',
     price: 'Rp20.000',
     stock: 2,
   },
   {
     name: 'Ayam Bakar',
-    image: '/static/images/ayam_bakar.jpg',
+    image: '/public/images/ayam_bakar.jpg',
     price: 'Rp10.000',
     stock: 15,
   },

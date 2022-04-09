@@ -17,13 +17,13 @@ export default function Cart() {
   const carts = [
     {
       name: 'Ayam Pop',
-      image: '/static/images/ayam_pop.jpg',
+      image: '/public/images/ayam_pop.jpg',
       price: 10000,
       amount: 3,
     },
     {
       name: 'Rendang',
-      image: '/static/images/rendang.jpg',
+      image: '/public/images/rendang.jpg',
       price: 15000,
       amount: 2,
     },
