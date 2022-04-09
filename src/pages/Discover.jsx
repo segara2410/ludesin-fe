@@ -23,7 +23,7 @@ import shops from '../data/shops';
 const categories = [
   'Sayur',
   'Buah',
-  'Daging',
+  'Restoran',
 ];
 
 export default function Discover() {

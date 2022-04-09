@@ -1,17 +1,17 @@
 const deals = [
   {
     id: 1,
-    name: 'Toko Buah Adam',
+    name: 'Toko Buah Berkat',
     category: 'Buah',
-    image: 'https://source.unsplash.com/random',
+    image: '/static/images/berkat_buah.jpg',
     rate: 4.6,
     distance: 0.6,
   },
   {
     id: 2,
-    name: 'Toko Sayur Kresna',
-    category: 'Sayur',
-    image: 'https://source.unsplash.com/random',
+    name: 'RM Padang Surya',
+    category: 'Restoran',
+    image: '/static/images/rm_padang_surya.jpg',
     rate: 4.6,
     distance: 0.6,
   },

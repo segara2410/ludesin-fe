@@ -24,7 +24,7 @@ import deals from '../data/deals';
 const categories = [
   'Sayur',
   'Buah',
-  'Daging',
+  'Restoran',
 ];
 
 export default function Home() {

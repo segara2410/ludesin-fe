@@ -16,54 +16,18 @@ import Divider from '@mui/material/Divider';
 export default function Cart() {
   const carts = [
     {
-      name: 'Sawi Putih',
-      image: '/static/images/logo.png',
+      name: 'Ayam Pop',
+      image: '/static/images/ayam_pop.jpg',
       price: 10000,
-      amount: 5,
+      amount: 3,
     },
     {
-      name: 'Kentang',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 5000,
-      amount: 5,
+      name: 'Rendang',
+      image: '/static/images/rendang.jpg',
+      price: 15000,
+      amount: 2,
     },
-    {
-      name: 'Sawi Putih',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 10000,
-      amount: 5,
-    },
-    {
-      name: 'Kentang',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 5000,
-      amount: 5,
-    },
-
-    {
-      name: 'Sawi Putih',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 10000,
-      amount: 5,
-    },
-    {
-      name: 'Kentang',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 5000,
-      amount: 5,
-    },
-    {
-      name: 'Sawi Putih',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 10000,
-      amount: 5,
-    },
-    {
-      name: 'Kentang',
-      image: 'https://source.unsplash.com/random/400x400',
-      price: 5000,
-      amount: 5,
-    },
+   
   ];
 
   return (
@@ -151,7 +115,7 @@ export default function Cart() {
                     items)
                   </Typography>
                   <Typography display="inline" variant="body1" color="text.primary" sx={{ float: 'right' }}>
-                    Rp100.000
+                    Rp60.000
                   </Typography>
                 </Grid>
                 <Grid>
@@ -167,7 +131,7 @@ export default function Cart() {
                   Total Price
                 </Typography>
                 <Typography display="inline" variant="body1" color="text.primary" sx={{ float: 'right', fontWeight: 'bold' }}>
-                  Rp90.000
+                  Rp50.000
                 </Typography>
               </CardContent>
 
