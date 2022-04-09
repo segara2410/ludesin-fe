@@ -1,4 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
@@ -9,12 +10,22 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Shop from './pages/Shop';
 
+// Or Create your Own theme:
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#0d9c48',
+      dark: '#0b8c40',
+    },
+  },
+});
+
 export default function App() {
   const location = useLocation();
   const routesWithoutNavbar = ['/login', '/register'];
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       {!routesWithoutNavbar.includes(location.pathname) && <Navbar />}
       <Routes>
         <Route path="/login" element={<Login />} />
@@ -24,6 +35,6 @@ export default function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-    </>
+    </ThemeProvider>
   );
 }

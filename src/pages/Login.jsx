@@ -73,7 +73,7 @@ export default function Login() {
               label="Remember me"
             />
             <Button
-              type="submit"
+              href="/"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}

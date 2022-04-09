@@ -39,14 +39,20 @@ export default function Navbar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+          <Box
+            component={Link}
+            sx={{
+              height: 48,
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+            }}
+            to="/"
           >
-            Ludesin
-          </Typography>
+            <img
+              alt="logo"
+              src="/static/images/logo_white.png"
+            />
+          </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -77,6 +83,9 @@ export default function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              <MenuItem key="home" component={Link} to="/">
+                <Typography textAlign="center">Home</Typography>
+              </MenuItem>
               {pages.map((page) => (
                 <MenuItem key={page} component={Link} to={`/${page.toLowerCase()}`}>
                   <Typography textAlign="center">{page}</Typography>
@@ -84,24 +93,44 @@ export default function Navbar() {
               ))}
             </Menu>
           </Box>
+          <Box
+            component="img"
+            sx={{
+              height: 100,
+              my: -10,
+              display: { xs: 'flex', md: 'none' },
+            }}
+            alt="logo"
+            src="/static/images/logofont_white.png"
+          />
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            Ludesin
-          </Typography>
+          />
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 href={`/${page.toLowerCase()}`}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-                style={{ textTransform: 'none' }}
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block',
+                  textTransform: 'none',
+                }}
               >
-                {page}
+                <Typography
+                  variant="h6"
+                  noWrap
+                  sx={{
+                    fontWeight: 'bold',
+                  }}
+                >
+                  {page}
+                </Typography>
               </Button>
             ))}
           </Box>
@@ -112,7 +141,7 @@ export default function Navbar() {
             </IconButton>
 
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="Remy Sharp" src="/static/images/avatar.jpg" />
+              <Avatar alt="avatar" src="/static/images/avatar.jpg" />
             </IconButton>
             <Menu
               sx={{ mt: '45px' }}
@@ -133,7 +162,7 @@ export default function Navbar() {
               <MenuItem>Profile</MenuItem>
               <MenuItem>Order History</MenuItem>
               <Divider />
-              <MenuItem>Logout</MenuItem>
+              <MenuItem component={Link} to="/login">Logout</MenuItem>
             </Menu>
           </Box>
         </Toolbar>

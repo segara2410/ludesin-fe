@@ -11,6 +11,7 @@ import StarIcon from '@mui/icons-material/Star';
 import CardActions from '@mui/material/CardActions';
 import TextField from '@mui/material/TextField';
 import Modal from '@mui/material/Modal';
+import { grey } from '@mui/material/colors';
 
 import { useLocation } from 'react-router-dom';
 
@@ -172,21 +173,27 @@ export default function Shop() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <TextField
-                    id="outlined-number"
-                    label="Quantity"
-                    type="number"
-                    size="small"
-                    InputLabelProps={{
-                      shrink: true,
-                    }}
-                    fullWidth
-                    InputProps={{ inputProps: { min: 0, max: product.stock } }}
-                    defaultValue={0}
-                  />
-                  <Button size="small" fullWidth color="primary" onClick={() => handleOpen(product.name)}>
-                    add to cart
-                  </Button>
+                  <Grid container spacing={1} direction="row" alignItems="center">
+                    <Grid item xs={6}>
+                      <TextField
+                        id="outlined-number"
+                        label="Quantity"
+                        type="number"
+                        size="small"
+                        InputLabelProps={{
+                          shrink: true,
+                        }}
+                        InputProps={{ inputProps: { min: 0, max: product.stock } }}
+                        defaultValue={0}
+                        fullWidth
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <Button size="small" fullWidth onClick={() => handleOpen(product.name)}>
+                        add to cart
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </CardActions>
               </Card>
             </Grid>
@@ -209,10 +216,21 @@ export default function Shop() {
             succesfully added to your cart.
           </Typography>
           <Grid direction="row" align="center">
-            <Button sx={{ mx: 1 }} size="small" onClick={handleClose} variant="contained">
+            <Button
+              size="small"
+              onClick={handleClose}
+              variant="contained"
+              sx={{
+                mx: 1,
+                bgcolor: grey[600],
+                ':hover': {
+                  bgcolor: grey[700],
+                },
+              }}
+            >
               Close
             </Button>
-            <Button sx={{ mx: 1 }} size="small" href="/cart" color="success" variant="contained">
+            <Button sx={{ mx: 1 }} size="small" href="/cart" variant="contained">
               Open Cart
             </Button>
           </Grid>

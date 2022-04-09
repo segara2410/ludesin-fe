@@ -8,28 +8,16 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import StarIcon from '@mui/icons-material/Star';
-import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
-import SearchIcon from '@mui/icons-material/Search';
-import FilterListIcon from '@mui/icons-material/FilterList';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Checkbox from '@mui/material/Checkbox';
-import ListItemText from '@mui/material/ListItemText';
 import TextField from '@mui/material/TextField';
 import DeleteIcon from '@mui/icons-material/Delete';
-import CardHeader from '@mui/material/CardHeader';
 import Divider from '@mui/material/Divider';
 
-import shops from '../data/shops';
-
-export default function Discover() {
-  const shop = shops[0];
+export default function Cart() {
   const carts = [
     {
       name: 'Sawi Putih',
-      image: 'https://source.unsplash.com/random/400x400',
+      image: '/static/images/logo.png',
       price: 10000,
       amount: 5,
     },
@@ -101,7 +89,7 @@ export default function Discover() {
       </Box>
       <Container sx={{ pb: 8 }}>
         <Grid spacing={2} container>
-          <Grid item xs={8}>
+          <Grid item xs={12} md={8}>
             {carts.map((item) => (
               <Card sx={{ display: 'flex', my: 1 }}>
                 <CardMedia
@@ -149,7 +137,7 @@ export default function Discover() {
               </Card>
             ))}
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} md={4}>
             <Card>
               <CardContent>
                 <Typography gutterBottom variant="h6" sx={{ fontWeight: 'bold' }}>
@@ -184,7 +172,7 @@ export default function Discover() {
               </CardContent>
 
               <CardActions>
-                <Button fullWidth size="small" color="success" variant="contained" href="/checkout">Checkout</Button>
+                <Button fullWidth size="small" variant="contained" href="/checkout">Checkout</Button>
               </CardActions>
             </Card>
           </Grid>
