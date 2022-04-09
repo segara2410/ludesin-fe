@@ -50,7 +50,7 @@ export default function Navbar() {
           >
             <img
               alt="logo"
-              src="/public/images/logo_white.png"
+              src="/images/logo_white.png"
             />
           </Box>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
               display: { xs: 'flex', md: 'none' },
             }}
             alt="logo"
-            src="/public/images/logofont_white.png"
+            src="/images/logofont_white.png"
           />
           <Typography
             variant="h6"
@@ -141,7 +141,7 @@ export default function Navbar() {
             </IconButton>
 
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="avatar" src="/public/images/avatar.jpg" />
+              <Avatar alt="avatar" src="/images/avatar.jpg" />
             </IconButton>
             <Menu
               sx={{ mt: '45px' }}
