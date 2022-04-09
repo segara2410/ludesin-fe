@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
@@ -14,6 +15,7 @@ import Checkbox from '@mui/material/Checkbox';
 import ListItemText from '@mui/material/ListItemText';
 import TextField from '@mui/material/TextField';
 
+import { Button } from '@mui/material';
 import list from '../data/list';
 import newItems from '../data/newItems';
 import picks from '../data/picks';
@@ -323,84 +325,6 @@ export default function Home() {
                 </Card>
               </Grid>
             )
-          ))}
-        </Grid>
-      </Container>
-      <Box
-        sx={{
-          bgcolor: 'background.paper',
-          pt: 2,
-          pb: 2,
-        }}
-      >
-        <Container>
-          <Typography
-            component="h4"
-            variant="h4"
-            align="left"
-            color="text.primary"
-            gutterBottom
-            sx={{ fontWeight: 'bold' }}
-          >
-            Shop List
-          </Typography>
-        </Container>
-      </Box>
-      <Container sx={{ pb: 8 }}>
-        <Menu
-          id="long-menu"
-          MenuListProps={{
-            'aria-labelledby': 'long-button',
-          }}
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          PaperProps={{
-            style: {
-              maxHeight: ITEM_HEIGHT * 4.5,
-              width: '20ch',
-            },
-          }}
-        >
-          {categories.map((name) => (
-            <MenuItem key={name} value={name} onClick={() => handleFilter(name)}>
-              <Checkbox checked={filters.indexOf(name) > -1} />
-              <ListItemText primary={name} />
-            </MenuItem>
-          ))}
-        </Menu>
-        <Grid item xs={12} md={8}>
-          {list.map((list) => (
-            <Card sx={{ display: 'flex', my: 1 }}>
-              <CardMedia
-                component="img"
-                sx={{ width: 151 }}
-                image={list.image}
-                alt={list.name}
-              />
-              <Box sx={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
-                <CardContent>
-                  <Typography variant="body1" display="inline">
-                    {list.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Rp
-                    {list.price}
-                    {' '}
-                    / 100g
-                  </Typography>
-                </CardContent>
-              </Box>
-
-            </Card>
           ))}
         </Grid>
       </Container>
