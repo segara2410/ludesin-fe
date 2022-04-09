@@ -42,7 +42,7 @@ export default function Home() {
           {deals.map((deal) => (
             <Grid item key={deal.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/deal?id=${deal.id}`}>
+                <CardActionArea href={`/shop?id=${deal.id}`}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -103,7 +103,7 @@ export default function Home() {
           {picks.map((pick) => (
             <Grid item key={pick.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/pick?id=${pick.id}`}>
+                <CardActionArea href={`/shop?id=${pick.id}`}>
                   <CardMedia
                     component="img"
                     height="200"
@@ -164,7 +164,7 @@ export default function Home() {
           {newItems.map((newItem) => (
             <Grid item key={newItem.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/newItem?id=${newItem.id}`}>
+                <CardActionArea href={`/shop?id=${newItem.id}`}>
                   <CardMedia
                     component="img"
                     height="200"
