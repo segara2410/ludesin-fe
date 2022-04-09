@@ -27,7 +27,6 @@ export default function Cart() {
       price: 15000,
       amount: 2,
     },
-   
   ];
 
   return (
