@@ -1,4 +1,4 @@
-const shops = [
+const deals = [
   {
     id: 1,
     name: 'Toko Buah Adam',
@@ -31,22 +31,6 @@ const shops = [
     rate: 4.6,
     distance: 0.6,
   },
-  {
-    id: 5,
-    name: 'Toko Buah D',
-    category: 'Buah',
-    image: 'https://source.unsplash.com/random',
-    rate: 4.6,
-    distance: 0.6,
-  },
-  {
-    id: 6,
-    name: 'Toko Buah ABC',
-    category: 'Buah',
-    image: 'https://source.unsplash.com/random',
-    rate: 4.6,
-    distance: 0.6,
-  },
 ];
 
-export default shops;
+export default deals;

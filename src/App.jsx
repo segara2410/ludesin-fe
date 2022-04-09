@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Discover from './pages/Discover';
-
+import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Shop from './pages/Shop';
@@ -28,6 +28,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       {!routesWithoutNavbar.includes(location.pathname) && <Navbar />}
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/discover" element={<Discover />} />

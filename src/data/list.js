@@ -1,4 +1,4 @@
-const shops = [
+const list = [
   {
     id: 1,
     name: 'Toko Buah Adam',
@@ -49,4 +49,4 @@ const shops = [
   },
 ];
 
-export default shops;
+export default list;
