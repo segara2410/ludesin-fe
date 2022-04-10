@@ -8,6 +8,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import StarIcon from '@mui/icons-material/Star';
+import { Link } from 'react-router-dom';
 
 import { Button } from '@mui/material';
 import newItems from '../data/newItems';
@@ -42,7 +43,10 @@ export default function Home() {
           {deals.map((deal) => (
             <Grid item key={deal.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/deal?id=${deal.id}`}>
+                <CardActionArea
+                  component={Link}
+                  to={`/shop?id=${deal.id}`}
+                >
                   <CardMedia
                     component="img"
                     height="200"
@@ -103,7 +107,10 @@ export default function Home() {
           {picks.map((pick) => (
             <Grid item key={pick.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/pick?id=${pick.id}`}>
+                <CardActionArea
+                  component={Link}
+                  to={`/shop?id=${pick.id}`}
+                >
                   <CardMedia
                     component="img"
                     height="200"
@@ -164,7 +171,10 @@ export default function Home() {
           {newItems.map((newItem) => (
             <Grid item key={newItem.name} xs={12} sm={6} md={3}>
               <Card>
-                <CardActionArea href={`/newItem?id=${newItem.id}`}>
+                <CardActionArea
+                  component={Link}
+                  to={`/shop?id=${newItem.id}`}
+                >
                   <CardMedia
                     component="img"
                     height="200"
@@ -212,7 +222,8 @@ export default function Home() {
             color="primary"
             size="large"
             variant="outlined"
-            href="/discover"
+            component={Link}
+            to="/discover"
             sx={{
               fontWeight: 'bold',
               borderWidth: 2,

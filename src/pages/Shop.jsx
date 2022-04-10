@@ -13,7 +13,7 @@ import TextField from '@mui/material/TextField';
 import Modal from '@mui/material/Modal';
 import { grey } from '@mui/material/colors';
 
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import shops from '../data/shops';
 
@@ -38,50 +38,50 @@ function useQuery() {
 const products = [
   {
     name: 'Ayam Pop',
-    image: '/static/images/ayam_pop.jpg',
+    image: '/images/ayam_pop.jpg',
     price: 'Rp10.000',
     stock: 7,
   },
   {
     name: 'Ayam Gulai',
-    image: '/static/images/gulai-ayamjpg.jpg',
+    image: '/images/gulai-ayamjpg.jpg',
     price: 'Rp10.000',
     stock: 5,
   },
   {
     name: 'Rendang',
-    image: '/static/images/rendang.jpg',
+    image: '/images/rendang.jpg',
     price: 'Rp15.000',
     stock: 4,
   },
   {
     name: 'Paru',
-    image: '/static/images/paru.jpg',
+    image: '/images/paru.jpg',
     price: 'Rp5.000',
     stock: 10,
   },
 
   {
     name: 'Dendeng Balado',
-    image: '/static/images/dendeng.jpg',
+    image: '/images/dendeng.jpg',
     price: 'Rp7.000',
     stock: 15,
   },
   {
     name: 'Gulai Otak',
-    image: '/static/images/gulai_otak.jpg',
+    image: '/images/gulai_otak.jpg',
     price: 'Rp7.000',
     stock: 5,
   },
   {
     name: 'Gulai Kepala Kakap',
-    image: '/static/images/gulai-kepala-kakap.jpg',
+    image: '/images/gulai-kepala-kakap.jpg',
     price: 'Rp20.000',
     stock: 2,
   },
   {
     name: 'Ayam Bakar',
-    image: '/static/images/ayam_bakar.jpg',
+    image: '/images/ayam_bakar.jpg',
     price: 'Rp10.000',
     stock: 15,
   },
@@ -230,7 +230,7 @@ export default function Shop() {
             >
               Close
             </Button>
-            <Button sx={{ mx: 1 }} size="small" href="/cart" variant="contained">
+            <Button sx={{ mx: 1 }} size="small" component={Link} to="/cart" variant="contained">
               Open Cart
             </Button>
           </Grid>

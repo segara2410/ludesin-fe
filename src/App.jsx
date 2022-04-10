@@ -28,13 +28,13 @@ export default function App() {
     <ThemeProvider theme={theme}>
       {!routesWithoutNavbar.includes(location.pathname) && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/discover" element={<Discover />} />
-        <Route path="/checkout" element={<Checkout />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/register" element={<Register />} />
+        <Route exact path="/discover" element={<Discover />} />
+        <Route exact path="/checkout" element={<Checkout />} />
+        <Route exact path="/shop" element={<Shop />} />
+        <Route exact path="/cart" element={<Cart />} />
       </Routes>
     </ThemeProvider>
   );

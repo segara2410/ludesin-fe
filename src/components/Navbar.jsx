@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +13,6 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Link } from 'react-router-dom';
 
 const pages = ['Discover'];
 
@@ -50,7 +50,7 @@ export default function Navbar() {
           >
             <img
               alt="logo"
-              src="/static/images/logo_white.png"
+              src="/images/logo_white.png"
             />
           </Box>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
               display: { xs: 'flex', md: 'none' },
             }}
             alt="logo"
-            src="/static/images/logofont_white.png"
+            src="/images/logofont_white.png"
           />
           <Typography
             variant="h6"
@@ -114,7 +114,8 @@ export default function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                href={`/${page.toLowerCase()}`}
+                component={Link}
+                to={`/${page.toLowerCase()}`}
                 sx={{
                   my: 2,
                   color: 'white',
@@ -136,12 +137,17 @@ export default function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <IconButton href="/cart" sx={{ mr: 1 }} size="large">
+            <IconButton
+              component={Link}
+              to="/cart"
+              sx={{ mr: 1 }}
+              size="large"
+            >
               <ShoppingCartIcon sx={{ color: 'white' }} />
             </IconButton>
 
             <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-              <Avatar alt="avatar" src="/static/images/avatar.jpg" />
+              <Avatar alt="avatar" src="/images/avatar.jpg" />
             </IconButton>
             <Menu
               sx={{ mt: '45px' }}

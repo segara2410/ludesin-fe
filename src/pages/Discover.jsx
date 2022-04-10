@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
@@ -122,7 +123,10 @@ export default function Discover() {
             filters.includes(shop.category) && (
               <Grid item key={shop.name} xs={12} sm={6} md={3}>
                 <Card>
-                  <CardActionArea href={`/shop?id=${shop.id}`}>
+                  <CardActionArea
+                    component={Link}
+                    to={`/shop?id=${shop.id}`}
+                  >
                     <CardMedia
                       component="img"
                       height="200"

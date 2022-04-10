@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -17,13 +18,13 @@ export default function Cart() {
   const carts = [
     {
       name: 'Ayam Pop',
-      image: '/static/images/ayam_pop.jpg',
+      image: '/images/ayam_pop.jpg',
       price: 10000,
       amount: 3,
     },
     {
       name: 'Rendang',
-      image: '/static/images/rendang.jpg',
+      image: '/images/rendang.jpg',
       price: 15000,
       amount: 2,
     },
@@ -135,7 +136,15 @@ export default function Cart() {
               </CardContent>
 
               <CardActions>
-                <Button fullWidth size="small" variant="contained" href="/checkout">Checkout</Button>
+                <Button
+                  fullWidth
+                  size="small"
+                  variant="contained"
+                  component={Link}
+                  to="/checkout"
+                >
+                  Checkout
+                </Button>
               </CardActions>
             </Card>
           </Grid>

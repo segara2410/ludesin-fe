@@ -1,7 +1,7 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -85,9 +85,9 @@ export default function Register() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="/login" variant="body2">
+              <Typography component={Link} to="/login" variant="body2" color="primary">
                 Already have an account? Sign in
-              </Link>
+              </Typography>
             </Grid>
           </Grid>
         </Box>
